@@ -24,10 +24,15 @@ export class HomePage {
     constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, public events: Events) {
  
     }
- 
+
     ionViewDidLoad() {
  	this.loadDatos(); 
     }
+    actualiza(){
+	console.log("actualizando...");
+	this.loadDatos();
+  }
+
   loadDatos(){
     var luz = [];
     var tiempo=[];
@@ -38,8 +43,8 @@ export class HomePage {
     	this.data = data;
        	console.log(this.data);
 	for (let item of this.data){
-		luz.push(JSON.stringify(this.data[cont].luz));
-		tiempo.push((JSON.stringify(this.data[cont].timestamp)).replace(/2017|11|30|-|T|Z|"/g,''));
+		luz.push(JSON.stringify(data[cont].luz));
+		tiempo.push((JSON.stringify(data[cont].timestamp)).replace(/2017|11|30|-|T|Z|"/g,''));
 		cont++;
 	}
 	this.loadGraficas(luz, tiempo);
@@ -209,9 +214,10 @@ export class HomePage {
             }
  
         });
+	
 
   }
- 
+
  
 }
 
