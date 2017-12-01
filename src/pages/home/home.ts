@@ -157,7 +157,7 @@ export class HomePage {
 			'rgba(33, 150, 156, 0.4)',
 			'rgba(156, 33, 33, 0.43)',
 			'rgba(156, 141, 33, 0.44)',
-			'rgba(33, 35, 156, 0.44)'
+			'rgba(33, 35, 156, 0.44) '
                     ],
                     hoverBackgroundColor: [
                         "#FF6384",
